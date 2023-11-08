@@ -1,0 +1,176 @@
+\input{preamble}
+\begin{document}
+\begin{center}
+{\large
+Федеральное государственное автономное образовательное учреждение\\
+высшего образования\\
+«Национальный исследовательский университет ИТМО»\\
+\vspace{5pt}
+Факультет программной инженерии и компьютерной техники\\
+}
+\vspace{17em}
+{\Large Практическая работа №5} \Large по дисциплине\\
+\smallskip
+{\LARGE \textbf{Теория вероятностей и
+математическая статистика}}\\[1em]
+{\large Вариант №14}
+\end{center}
+\vspace{20em}
+{\large
+\begin{flushright}
+Выполнил: Состанов Тимур Айратович\\
+Группа: P3214\\
+Преподаватель: Селина Елена Георгиевна\\
+\end{flushright}
+\vspace{\fill}
+\begin{center}
+Санкт-Петербург
+2023г.
+\end{center}
+}\newpage
+\smallskip
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\LARGE Задание}
+
+\smallskip
+\parindent=0mmКаждый студент получает выборку из 20 чисел. Необходимо определить следующие статистические характеристики: вариационный ряд, экстремальные значения и размах, оценки математического ожидания и среднеквадратического отклонения, эмпирическую функцию распределения и её график, гистограмму и полигон приведенных частот группированной выборки. Для расчета характеристик и построения графиков нужно написать программу на одном из языков программирования. Листинг программы и результаты работы должны быть представлены в отчете по практической работе\\
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\large Вариант №14}
+
+\smallskip
+\renewcommand{\arraystretch}{1.5}\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+{\large -0.53} & {\large -0.87} & {\large -0.93} & {\large -0.41} & {\large 0.48} & {\large 0.81} & {\large -1.55} & {\large -1.42} & {\large -1.34} & {\large -0.61} & {\large -0.04} & {\large -0.33} & {\large -0.84} & {\large -1.33} & {\large 0.57} & {\large 0.62} & {\large 0.76} & {\large -0.48} & {\large 0.3} & {\large -0.35}\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\phantom{Я ненавижу LaTeX}\\
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\LARGE Выполнение}
+
+\smallskip
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\large Вариационный ряд}
+
+\smallskip
+\renewcommand{\arraystretch}{1.5}\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+{\large -1.55} & {\large -1.42} & {\large -1.34} & {\large -1.33} & {\large -0.93} & {\large -0.87} & {\large -0.84} & {\large -0.61} & {\large -0.53} & {\large -0.48} & {\large -0.41} & {\large -0.35} & {\large -0.33} & {\large -0.04} & {\large 0.3} & {\large 0.48} & {\large 0.57} & {\large 0.62} & {\large 0.76} & {\large 0.81}\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\large Статистический ряд}
+
+\smallskip
+\renewcommand{\arraystretch}{1.5}\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+{\large -1.55} & {\large -1.42} & {\large -1.34} & {\large -1.33} & {\large -0.93} & {\large -0.87} & {\large -0.84} & {\large -0.61} & {\large -0.53} & {\large -0.48} & {\large -0.41} & {\large -0.35} & {\large -0.33} & {\large -0.04} & {\large 0.3} & {\large 0.48} & {\large 0.57} & {\large 0.62} & {\large 0.76} & {\large 0.81}\\
+\hline
+{\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1} & {\large 1}\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\large Экстремальные значения}
+
+\smallskip
+\parindent=0mmМинимальное значение: $x_{0}$ = -1.55; Максимальное значение: $x_{20}$ = 0.81\\
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\large Размах}
+
+\smallskip
+\parindent=0mmРазмах = наибольшее значение - наименьшее значение = $x_{20}$ - $x_{0}$; Размах = 2.36\\
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\large Математическое ожидание}
+
+\smallskip
+\parindent=0mmДля данной выборки статистический ряд будет совпадать с вариационным, так как каждое значение встречается только раз\\
+\phantom{Я ненавижу LaTeX}\\
+\parindent=0mmВыборочное среднее (выборочное математическое ожидание) - среднее арифметическое всех значений выборки, считается по формуле: $$\overline{x_B} = \frac{1}{n} \sum_{i=1}^k x_i\cdot n_i$$\\
+\phantom{Я ненавижу LaTeX}\\
+\parindent=0mmДля исходной выборки $$\overline{x_B} = -0.3745$$\\
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\large Выбороная дисперсия}
+
+\smallskip
+\parindent=0mm Выбороная дисперсия $D_B$ - среднее арифметическое квадратов отклонений значений выборки от выборочной средней $\overline{x_B}$, считается по формуле: $$D_B = \frac{1}{n} \sum_{i=1}^k (x_i - \overline{x_B})^2 \cdot n_i$$\\
+\phantom{Я ненавижу LaTeX}\\
+\newpage
+\parindent=0mmДля исходной выборки $$D_B = -0.3745$$\\
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\large Среднеквадратическое отклонение}
+
+\smallskip
+\parindent=0mm Выборочное среднее квадратическое отклонение выборки определяется формулой $$\sigma_B = \sqrt{D_B}$$\\
+\phantom{Я ненавижу LaTeX}\\
+\parindent=0mmДля исходной выборки $$\sigma_B = 0.743428$$\\
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\large Исправленное выборочное среднее квадратическое отклонение}
+
+\smallskip
+\parindent=0mm При решении практических используется величина $$S^2 = \frac{1}{n - 1} \sum_{i=1}^k (x_i - \overline{x_B})^2 \cdot n_i = \frac{1}{n - 1}D_B$$ Которая называется \textit{исправленной выборочной дисперсией}\\
+\phantom{Я ненавижу LaTeX}\\
+\parindent=0mm Величина $S = \sqrt{S^2}$ называется исправленным выборочным средним квадратическим отклонением\\
+\phantom{Я ненавижу LaTeX}\\
+\parindent=0mmДля исходной выборки $$S = 0.762741$$\\
+\phantom{Я ненавижу LaTeX}\\
+\textbf{\large Эмпирическая функция распределения}
+
+\smallskip
+\parindent=0mm Эмпирической (статистической) функцией распределения называется функция $F_n^x(x)$, определяющая для каждого значения $x$ частность события $\{X < x\}$: $$F_n^*(x) = p^*\{X < x\}$$\\
+\phantom{Я ненавижу LaTeX}\\
+\parindent=0mmГде $p^x = \frac{{n_x}}{{n}}$ - отношение количесвта вариантов \{X < x\} к общему числу вариантов\\
+\phantom{Я ненавижу LaTeX}\\
+Для исходной выборки $$F_n^*(x) = \begin{cases}
+0 & \text{при } x < -1.55\\
+0.05 & \text{при } -1.55\leq x < -1.42\\
+0.1 & \text{при } -1.42\leq x < -1.34\\
+0.15 & \text{при } -1.34\leq x < -1.33\\
+0.2 & \text{при } -1.33\leq x < -0.93\\
+0.25 & \text{при } -0.93\leq x < -0.87\\
+0.3 & \text{при } -0.87\leq x < -0.84\\
+0.35 & \text{при } -0.84\leq x < -0.61\\
+0.4 & \text{при } -0.61\leq x < -0.53\\
+0.45 & \text{при } -0.53\leq x < -0.48\\
+0.5 & \text{при } -0.48\leq x < -0.41\\
+0.55 & \text{при } -0.41\leq x < -0.35\\
+0.6 & \text{при } -0.35\leq x < -0.33\\
+0.65 & \text{при } -0.33\leq x < -0.04\\
+0.7 & \text{при } -0.04\leq x < 0.3\\
+0.75 & \text{при } 0.3\leq x < 0.48\\
+0.8 & \text{при } 0.48\leq x < 0.57\\
+0.85 & \text{при } 0.57\leq x < 0.62\\
+0.9 & \text{при } 0.62\leq x < 0.76\\
+0.95 & \text{при } 0.76\leq x < 0.81\\
+1 & \text{при } x \geq 0.81
+\end{cases}$$
+\phantom{Я ненавижу LaTeX}\\
+\begin {figure}[h]\centering\includegraphics[width=0.8\textwidth]{empirical_graph.png}\caption{График эмпирической функции распределения}\label{fig:my_label}\end{figure}
+\newpage
+\textbf{\large Интервальный статистический ряд}
+
+\smallskip
+\parindent=0mmТак как признак является непрерывным, то имеет смысл составить интервальный статический ряд (для дальнейшего использования в функции распределения). Пользуясь формулой Стерджеса, найдем величину интервала $$h = \frac{{x_{{max}} - x_{{min}}}}{{1 + log_2 n}}$$\\
+\phantom{Я ненавижу LaTeX}\\
+\parindent=0mmДля исходной выборки $$h = 0.443448$$Учитывая рекомендацию по выбору начала первого интервала $x_{нач} = x_{min} - \frac{h}{2}$\\
+\phantom{Я ненавижу LaTeX}\\
+\renewcommand{\arraystretch}{1.5}\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+{\large [-1.7717;-1.3283)} & {\large [-1.3283;-0.8848)} & {\large [-0.8848;-0.4414)} & {\large [-0.4414;0.0021)} & {\large [0.0021;0.4455)} & {\large [0.4455;0.889)}\\
+\hline
+{\large 4} & {\large 1} & {\large 5} & {\large 4} & {\large 1} & {\large 5}\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\phantom{Я ненавижу LaTeX}\\
+\begin {figure}[h]\centering\includegraphics[width=0.8\textwidth]{bar_char.png}\caption{Гистограмма}\label{fig:my_label}\end{figure}
+\parindent=0mm\newpage
+ \phantom{Я ненавижу LaTeX}\\\
+\phantom{Я ненавижу LaTeX}\\
+\begin {figure}[t]\centering\includegraphics[width=0.8\textwidth]{frequency_polygon.png}\caption{Полигон приведенных частот группированной выборки}\label{fig:my_label}\end{figure}
+\end{document}
