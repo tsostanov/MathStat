@@ -220,7 +220,7 @@ D_B = 0
 for i in set(sorted_selection):
     D_B += (i - x_B) ** 2 * sorted_selection.count(i) / len(sorted_selection)
 answer_file.write('\\newpage\n')
-some_text(f'Для исходной выборки $$D_B = {x_B}$$')
+some_text(f'Для исходной выборки $$D_B = {D_B}$$')
 header_maker('Среднеквадратическое отклонение')
 some_text(f' Выборочное среднее квадратическое отклонение выборки определяется формулой'
           f' $$\\sigma_B = \\sqrt{{D_B}}$$')
